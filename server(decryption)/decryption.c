@@ -26,6 +26,6 @@ bool decrypt_rsa(uint64_t z[20]) {
         printf("RSA decryption failed.\n");
         return false;
     }
-    print_array("Initial data, output after RSA decryption", data, 20);
+    print_array("Initial data, output after RSA decryption in hexadecimal", data, 20);
     return true;
 }
