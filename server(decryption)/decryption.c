@@ -16,9 +16,9 @@ void print_array(const char *label, const uint64_t arr[], size_t size) {
 }
 
 bool decrypt_rsa(uint64_t z[20]) {
-    print_array("Modulus", m, 20);
-    print_array("Server private key", d, 20);
-    print_array("Initial Data", data, 20);
+    print_array("Modulus in hexadecimal", m, 20);
+    print_array("Server private key in hexadecimal", d, 20);
+    print_array("Encrypted message received in hexadecimal", z, 20);
     
     uint64_t decrypted[20] = {0};
     printf("Performing RSA decryption...\n");
@@ -26,6 +26,6 @@ bool decrypt_rsa(uint64_t z[20]) {
         printf("RSA decryption failed.\n");
         return false;
     }
-    print_array("Output after RSA encryption", z, 20);
+    print_array("Initial data, output after RSA decryption", data, 20);
     return true;
 }

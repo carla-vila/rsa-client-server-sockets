@@ -14,13 +14,13 @@ bool rsa1024(uint64_t res[], uint64_t data[], uint64_t expo[], uint64_t key[]) {
     uint64_t temp_expo = 0;
 
     // Only print initial and mod_data state
-    printf("Initial Data [0]: %016llx\n", data[0]);
+    //printf("Initial Data [0]: %016llx\n", data[0]);
     modbignum(mod_data, data, key, 16);
-    printf("Data modulo Key [0]: %016llx\n", mod_data[0]);
+    //printf("Data modulo Key [0]: %016llx\n", mod_data[0]);
     result[0] = 1;
 
     expo_len = bit_length(expo, 16) / 64;
-    printf("Exponent Length: %d (64-bit words)\n", expo_len + 1);
+    //printf("Exponent Length: %d (64-bit words)\n", expo_len + 1);
 
     for (i = 0; i <= expo_len; i++) {
         temp_expo = expo[i];

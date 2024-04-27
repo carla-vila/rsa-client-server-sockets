@@ -55,7 +55,7 @@ int main() {
     while(1) {
         memset(buffer, 0, sizeof(buffer));
         if ((valread = read(new_socket, buffer, sizeof(buffer) - 1)) > 0) {
-            printf("Received: %s\n", buffer);
+            printf("Received encrypted data in decimal: %s\n", buffer);
             uint64_t z[20] = {0}; // Assuming the expected number of integers is known
             char *ptr = buffer;
             int idx = 0;

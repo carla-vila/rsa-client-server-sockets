@@ -23,16 +23,16 @@ void print_array(const char *label, const uint64_t arr[], size_t size) {
 }
 
 int main(int argc, char *argv[]) {
-    print_array("Modulus", m, 20);
-    print_array("Server public key", e, 20);
-    print_array("Initial Data", data, 20);
+    print_array("Modulus in hexadecimal", m, 20);
+    print_array("Server public key in hexadecimal", e, 20);
+    print_array("Initial Data in hexadecimal", data, 20);
 
     printf("Performing RSA encryption...\n");
     if (!rsa1024(z, data, e, m)) {
         printf("RSA encryption failed.\n");
         return 1;  
     }
-    print_array("Output after RSA encryption", z, 20);
+    print_array("Output after RSA encryption in hexadecimal", z, 20);
    
     send_encrypted_data(z);
 
