@@ -47,7 +47,7 @@ void send_encrypted_data(uint64_t z[20]) {
         perror("send failed");
         exit(EXIT_FAILURE);
     }
-    printf("Encrypted data sent: %s\n", message);
+    printf("Encrypted data sent in decimal: %s\n", message);
 
     close(sock);
 }

@@ -34,7 +34,7 @@ bool rsa1024(uint64_t res[], uint64_t data[], uint64_t expo[], uint64_t key[]) {
     }
 
     // Print final result more compactly
-    printf("Final Result [0]: %016llx\n", result[0]);
+    //printf("Final Result [0]: %016llx\n", result[0]);
     for (i = 0; i < 16; i++) {
         res[i] = result[i];
     }
