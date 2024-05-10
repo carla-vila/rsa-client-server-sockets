@@ -7,7 +7,7 @@
 #include <arpa/inet.h>
 
 #define PORT 12345
-#define SERVER_IP "192.168.1.36"
+#define SERVER_IP "192.168.1.76"
 
 void send_encrypted_data(uint64_t z[20]) {
     int sock = 0;
